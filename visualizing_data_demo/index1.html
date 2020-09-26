@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -11,32 +11,21 @@
     </style>
  </head>
  <body>
-
-
 <div id='chartContainer2'>
 		<h2>Survivors by Passenger Class (Bar)</h2>
-
 		<script type="text/javascript">
 			var svg2 = dimple.newSvg('#chartContainer2', 600,400);
 			d3.csv('titanic1.csv', function(data) {
 			var ChartInstance = new dimple.chart(svg2,data);
 			ChartInstance.setBounds(60,30,510,305);
 			var x = ChartInstance.addCategoryAxis('x', 'Passenger Class');
-			// x.addOrderRule('Type');
 			var y = ChartInstance.addPctAxis('y', 'Count');
-			//y.showbycent = true;
-			//var y = ChartInstance.addMeasureAxis('y', 'Count');
 			var s = ChartInstance.addSeries("Status", dimple.plot.bar);
 			ChartInstance.addLegend(60, 10, 510, 20, "right");
-
-
-
 			ChartInstance.draw(1000);	
-
 			 });
 		</script>
 		</div>
-	
 	<div id='PiechartContainer12'>
 		<h2>Passenger Share By Class 1, Class 2, Class 3 </h2>
         <h4><i>*The share of class 3 passengers was highest </i><h4>
@@ -46,13 +35,12 @@
 			var ChartInstance = new dimple.chart(svg12, data);
 			ChartInstance.setBounds(20, 20, 460, 360)
 			ChartInstance.addMeasureAxis("p", "Passenger Class");
-			ChartInstance.addSeries("Passenger Class", dimple.plot.pie);			
+			ChartInstance.addSeries("Passenger Class", dimple.plot.pie);
 			ChartInstance.addLegend(500, 20, 90, 300, "left");
 			ChartInstance.draw();
 			});
 		</script>
 	</div> 
-	
 	<div id='PiechartContainer1'>
 		<h2>Survivors by Gender (Pie chart)</h2>
 		<h4><i>*Females were given priority during the rescue</i><h4>
@@ -68,7 +56,6 @@
 			});
 		</script>
 	</div>  
-  	
   	<div id='chartContainer4'>
 	<h2>Survivors by Age </h2>
 	<h4><i>*Senior passengers were given priority to Life-Boats as seen in the movie</i><h4>
@@ -78,22 +65,13 @@
    		var ChartInstance = new dimple.chart(svg4,data);
   		ChartInstance.setBounds(60,30,510,305);
   		var x = ChartInstance.addCategoryAxis('x', 'Age');
-       // x.addOrderRule('Type');
   		var y = ChartInstance.addPctAxis('y', 'Count');
-  		//y.showbycent = true;
-  		//var y = ChartInstance.addMeasureAxis('y', 'Count');
         var s = ChartInstance.addSeries("Status", dimple.plot.bar);
         ChartInstance.addLegend(60, 10, 510, 20, "right");
-
-
-
- 		
-		ChartInstance.draw(1000);	
-
+		ChartInstance.draw(1000);
 		 });
 </script>
   	</div>
- 
 	<div id='chartContainer8'>
 	<h2>Survivors by Embarked </h2>
 	<h4><i>*Most 1st Class passengers aboarded the ship at Southampton UK</i><h4>
@@ -103,26 +81,17 @@
 	var ChartInstance = new dimple.chart(svg8,data);
 	ChartInstance.setBounds(60,30,510,305);
 	var x = ChartInstance.addCategoryAxis('x', 'Embarked');
-	// x.addOrderRule('Type');
 	var y = ChartInstance.addPctAxis('y', 'Count');
-	//y.showbycent = true;
-	//var y = ChartInstance.addMeasureAxis('y', 'Count');
 	var s = ChartInstance.addSeries("Status", dimple.plot.bar);
 	ChartInstance.addLegend(60, 10, 510, 20, "right");
-
-
-
 		ChartInstance.draw(1000); 
-
-
 	});
 	</script>
 	</div>	
-	
 		<div id='PiechartContainer2'>
 		<h2>Survivors by Embarked (Pie chart)</h2>
-		<h4><i>*Most 3rd Class passengers aboard the ship at Cherbourg , who were mostly from southern france & North Africa </i><h4>
-		
+		<h4><i>*Most 3rd Class passengers aboard the ship at Cherbourg,
+            who were mostly from southern france & North Africa </i><h4>
 		<script type="text/javascript">
 			var svg9 = dimple.newSvg("#PiechartContainer2", 590, 400);
 			d3.csv("titanic_train.csv", function (olddata) {
@@ -135,7 +104,6 @@
 			ChartInstance.draw();
 			});
 		</script>
-		
 		<script type="text/javascript">
 		    var ctr = 0;
 			function modify_data(data){
@@ -158,10 +126,8 @@
 			}
 		</script>
 	</div>
-
 		<div id="chartContainer10">
 		<h2>Passenger survival rate By </h2>
-		 
 		<h4><i>*shows that first class passengers were given priority to Life-Boats</i><h4>
 		<script type="text/javascript">
 			var svg10 = dimple.newSvg("#chartContainer10", 590, 400);
@@ -176,6 +142,5 @@
 			});
 		  </script>
 		</div>
-
  </body>
  </html>
